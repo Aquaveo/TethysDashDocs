@@ -30,3 +30,13 @@ To learn more about creating and using dashboards, see the :doc:`usage` section.
 .. note::
 
    This project is under active development.
+
+Contents
+--------
+
+.. toctree::
+   :maxdepth: 2
+
+   usage
+   plugins
+   feedback
