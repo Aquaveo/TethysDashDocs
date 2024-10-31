@@ -111,7 +111,7 @@ view.
 
 .. tip::
 
-   Users can type with dropdowns to search for context and subset options as shown below.
+   Users can type with dropdowns to search for and subset options as shown below.
    
    .. image:: ../images/dropdown_search.png
 
