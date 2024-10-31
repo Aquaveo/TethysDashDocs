@@ -109,6 +109,13 @@ view.
 
 .. image:: ../images/dashboard_edit_visualization.png
 
+.. tip::
+
+   Users can type with dropdowns to search for context and subset options as shown below.
+   
+   .. image:: ../images/dropdown_search.png
+
+
 --------------------------
 Saving Item Visualizations
 --------------------------
