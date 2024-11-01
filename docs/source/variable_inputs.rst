@@ -12,7 +12,11 @@ In the example below, a user can use variable inputs to simplify data analysis f
 visualizations that are tied to a variable input dropdown. When the user updates the variable input dropdown, the 
 connected visualizations will automatically recognize the change and update accordingly.
 
-
+.. video:: ../videos/variable_input_example.mp4
+    :autoplay:
+    :loop:
+    :nocontrols:
+    :class: variable-input-video
 
 Set Up
 ------
@@ -23,5 +27,3 @@ Usage
 -----
 
 .. image:: ../images/variable_input_usage.png
-
-
