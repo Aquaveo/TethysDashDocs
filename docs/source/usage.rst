@@ -129,9 +129,24 @@ Saving Item Visualizations
 Once the visualization is configured correctly, click on the "Save" button in the bottom right corner to save the 
 changes and return to the dashboard with the newly configured dashboard item.
 
-==============================
-Saving Dashboard Configuration
-==============================
+=============
+Copying Items
+=============
+
+Once in edit mode, each dashboard item will have a 3 dot menu in the top right corner. Click on the 3 dot menu and 
+select the "Create Copy" option. A new dashboard items will be created with the same settings and visualization.
+
+==============
+Deleting Items
+==============
+
+Once in edit mode, each dashboard item will have a 3 dot menu in the top right corner. Click on the 3 dot menu and 
+select the "Delete" option. You will be prompted if you would actually like to delete the dashboard item. Click "OK" to 
+delete or click "cancel" to not delete it.
+
+====================
+Saving Configuration
+====================
 
 .. |dashboard_save_button| image:: ../images/dashboard_save_button.png
    :scale: 50%
@@ -144,9 +159,9 @@ dropdown at the top of the app. These saved changes will persist when the applic
    All changes to the dashboard will be lost if exiting the application without saving. Make sure to save frequently.
 
 
-=================================
-Reverting Dashboard Configuration
-=================================
+=======================
+Reverting Configuration
+=======================
 
 .. |dashboard_revert_button| image:: ../images/dashboard_revert_button.png
    :scale: 50%
@@ -215,11 +230,31 @@ To persist any setting changes, click on the "Save changes" button on the bottom
 Share
 -----
 
+Dashboards can be shared publicly and accessible by anyone. Users can only share dashboards that they have created. To 
+share an existing dashboard, perform the following steps:
+
+   1. Select the desired dashboard that you would like to share. 
+   2. Click on the hamburger (|dashboard_settings_button|) button on left in the header to open up the settings.
+   3. Under the "Sharing Status" option, Click on the "Public" option.
+   4. Click on the "Save change" button at the bottom of the settings panel to save the new sharing status of the dashboard.
 
 Copy
 ----
 
+To copy an existing dashboard, perform the following steps:
+
+   1. Select the desired dashboard that you would like to copy. 
+   2. Click on the hamburger (|dashboard_settings_button|) button on left in the header to open up the settings.
+   3. Click on the "Copy dashboard" button at the bottom of the settings panel.
+
 
 Delete
 ------
+
+To delete an existing dashboard, perform the following steps:
+
+   1. Select the desired dashboard that you would like to delete. 
+   2. Click on the hamburger (|dashboard_settings_button|) button on left in the header to open up the settings.
+   3. Click on the "Delete dashboard" button at the bottom of the settings panel.
+   4. You will be prompted if you would actually like to delete the dashboard. Click "OK" to delete or click "cancel" to not delete it.
 
