@@ -1,7 +1,7 @@
-Plugins
-=======
+Visualization Plugins
+=====================
 
-.. _plugins:
+.. _visualizationplugins:
 
 Dashboard visualizations plugins are based on the `intake <https://github.com/intake/intake>`_ python package and can 
 be developed following the information found in the 

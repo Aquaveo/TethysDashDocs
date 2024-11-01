@@ -40,5 +40,6 @@ Contents
    :maxdepth: 2
 
    usage
+   variable_inputs
    plugins
    feedback
