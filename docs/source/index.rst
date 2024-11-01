@@ -14,16 +14,19 @@ setup for whatever desired purpose. Below are some example dashboards and use ca
 
 Operations
    .. image:: ../images/operations.png
+      :align: center
 
 |
 
 Briefing
    .. image:: ../images/briefing.png
+      :align: center
 
 |
 
 Data Analysis
    .. image:: ../images/data_analysis.png
+      :align: center
 
 |
 

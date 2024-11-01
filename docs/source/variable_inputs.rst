@@ -15,7 +15,6 @@ connected visualizations will automatically recognize the change and update acco
 .. video:: ../videos/variable_input_example.mp4
     :autoplay:
     :loop:
-    :nocontrols:
     :class: variable-input-video
 
 |
@@ -36,6 +35,7 @@ To setup a variable input, perform the following:
         - **EXISTING VISUALIZATION INPUTS:** The options under this item are derived from arguments for installed visualization plugins. Selecting one of these options will imitate the visualization argument but make it a variable input.
 
 .. image:: ../images/variable_input_setup.png
+   :align: center
 
 |
 
@@ -51,7 +51,9 @@ To connect variable inputs, perform the following:
         - If the argument is a **dropdown**, scroll to the bottom of the list and there is a section of "Variable Inputs". Select the desired variable input.
            
             .. image:: ../images/variable_input_usage.png
+                :align: center
 
         - If the argument is a **text** input, set the value to be "Variable Input:*<Desired Variable Input Name>*" 
 
             .. image:: ../images/variable_input_usage_text.png
+                :align: center
