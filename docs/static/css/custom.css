@@ -1,3 +1,7 @@
 .variable-input-video {
   width: 100%;
 }
+
+.wy-nav-content {
+  max-width: none;
+}
