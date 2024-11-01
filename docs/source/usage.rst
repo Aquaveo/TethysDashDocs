@@ -72,6 +72,8 @@ of the item
 .. image:: ../images/dashboard_resize_handler.png
    :align: center
 
+.. _Editing Item Visualizations and Visualization Settings:
+
 ======================================================
 Editing Item Visualizations and Visualization Settings
 ======================================================
