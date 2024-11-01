@@ -12,7 +12,7 @@ customized visualizations for whatever purpose they may need. If there are any v
 in their dashboards, they can try to make their own or create a request of Aquaveo to develop them. 
 
 If you would like to request a new visualization, the best way would be to create a github request. This allows for 
-better tracking and correspondence. If you do not have a github account, reach out to ckrewson@aquaoveo.com for help in 
+better tracking and correspondence. If you do not have a github account, reach out to ckrewson@aquaveo.com for help in 
 requesting a new visualization and provide the same information as step numbers 3 and 4 below. 
 
 If you have a github account and would like to request a new visualization, please do the following:
@@ -31,7 +31,7 @@ If you have a github account and would like to request a new visualization, plea
 Bugs/Issues
 -----------
 If you experience a bug or issue, the best way to let Aquaveo know would be to create a github issue. This allows for 
-better tracking and correspondence. If you do not have a github account, reach out to ckrewson@aquaoveo.com for help 
+better tracking and correspondence. If you do not have a github account, reach out to ckrewson@aquaveo.com for help 
 and provide the same information as step numbers 3 and 4 below. 
 
 If you have a github account and submit an issue, please do the following:
