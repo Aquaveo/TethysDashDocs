@@ -4,6 +4,8 @@ Welcome to TethysDash documentation!
 **TethysDash** is a `tethys <https://www.tethysplatform.org/>`_ application in which users can create customized 
 dashboards for simplified data discovery.
 
+To use a demo version of TethysDash, visit `http://demo.firo.aquaveo.com/apps/tethysdash/ <http://demo.firo.aquaveo.com/apps/tethysdash/>`_
+
 Visualizations for the dashboards are based on preinstalled visualization plugins. For more information 
 on the plugin architecture and developing new visualization plugins, see the :doc:`plugins` section. 
 
