@@ -3,8 +3,8 @@ Dashboard Usage
 
 .. _dashboard_usage:
 
-Create
-------
+Create a Dashboard
+------------------
 
 To create a new dashboard, do the following:
 
@@ -256,8 +256,8 @@ Saving Dashboard Settings
 To persist any setting changes, click on the "Save changes" button on the bottom of the dashboard settings panel.
 
 
-Share
------
+Share a Dashboard
+-----------------
 
 Dashboards can be shared publicly and accessible by anyone. Users can only share dashboards that they have created. To 
 share an existing dashboard, perform the following steps:
@@ -267,8 +267,8 @@ share an existing dashboard, perform the following steps:
    3. Under the "Sharing Status" option, Click on the "Public" option.
    4. Click on the "Save change" button at the bottom of the settings panel to save the new sharing status of the dashboard.
 
-Copy
-----
+Copy a Dashboard
+----------------
 
 To copy an existing dashboard, perform the following steps:
 
@@ -277,8 +277,8 @@ To copy an existing dashboard, perform the following steps:
    3. Click on the "Copy dashboard" button at the bottom of the settings panel.
 
 
-Delete
-------
+Delete a Dashboard
+------------------
 
 To delete an existing dashboard, perform the following steps:
 
