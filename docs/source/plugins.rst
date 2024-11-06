@@ -75,6 +75,11 @@ Plotly Chart
 
 Displays a `Plotly <https://plotly.com/python/>`_ chart with the provided data, layout, and configuration. 
 
+.. image:: ../images/plotly_example.png
+    :align: center
+
+|
+
 **visualization_type:** *plotly*
 
 **read return: (dictionary)**
@@ -150,7 +155,12 @@ Displays a `Plotly <https://plotly.com/python/>`_ chart with the provided data, 
 Table
 `````
 
-Display a table from the provided data.
+Displays a table from the provided data.
+
+.. image:: ../images/table_example.png
+    :align: center
+
+|
 
 **visualization_type:** *table*
 
@@ -196,8 +206,10 @@ Display a table from the provided data.
                     "occupation": "Teacher",
                 },
             ]
+            title = "User Information"
 
             return {
+                "title": title,
                 "data": data
             }
 
@@ -206,7 +218,12 @@ Display a table from the provided data.
 Image
 `````
 
-Display an image based on the returned URL string.
+Displays an image based on the returned URL string.
+
+.. image:: ../images/image_example.png
+    :align: center
+
+|
 
 **DataSource visualization_type value:** *image*
 
@@ -241,8 +258,13 @@ Display an image based on the returned URL string.
 Card
 ````
 
-Display a list of information in a card based fashion where each element in the dictionary can have its own color, 
+Displays a list of information in a card based fashion where each element in the dictionary can have its own color, 
 value, label, and icon. 
+
+.. image:: ../images/card_example.png
+    :align: center
+
+|
 
 **DataSource visualization_type value:** *card*
 
@@ -306,9 +328,14 @@ value, label, and icon.
 Map
 ```
 
-Display a map with the given layers and configuration. The map visualization is configured using the 
+Displays a map with the given layers and configuration. The map visualization is configured using the 
 `backlayer <https://github.com/Aquaveo/backlayer/tree/main>`_ npm package made by Aquaveo. The map visualization 
 is based on OpenLayers and follows similar configurations for configs and layers.
+
+.. image:: ../images/map_example.png
+    :align: center
+
+|
 
 **DataSource visualization_type value:** *map*
 
@@ -336,7 +363,7 @@ is based on OpenLayers and follows similar configurations for configs and layers
 
         def read(self):
             """
-                Return the data for the cards
+                Return the configuration for the map
             """
 
             mapConfig = {
@@ -466,7 +493,12 @@ is based on OpenLayers and follows similar configurations for configs and layers
 Custom
 ``````
 
-Display a custom visualization from a custom react component.
+Displays a custom visualization from a custom react component.
+
+.. image:: ../images/custom_example.png
+    :align: center
+
+|
 
 **Custom React Component**
 
@@ -606,6 +638,9 @@ Display a custom visualization from a custom react component.
                 super(CustomExample, self).__init__(metadata=metadata)
 
             def read(self):
+                """
+                    Return the configuration for the custom component
+                """
                 mfe_unpkg_url = "http://localhost:3000/remoteEntry.js"
                 # mfe_unpkg_url = "https://unpkg.com/mfe-ol@latest/dist/remoteEntry.js"
                 mfe_scope = "custom_component_scope"
