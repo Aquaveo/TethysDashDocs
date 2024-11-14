@@ -24,7 +24,7 @@ Set Up
 
 To setup a variable input, perform the following:
 
-    1. Edit the visualization of a dashboard item. See :ref:`Editing Item Visualizations and Visualization Settings <Editing Item Visualizations and Visualization Settings>` for more information if needed.
+    1. Edit the visualization of a dashboard item. See :ref:`Editing Items <Editing Items>` for more information if needed.
     2. For the "Visualization Type" option, select "Variable Input".
     3. For the "Variable Name" option, set the label/name of the variable.
     4. For the "Variable Options Source" option, users can select from a several options:
@@ -45,7 +45,7 @@ Connecting to Visualizations
 After a variable input has been created, users must connect visualizations to the variable inputs in order to use them. 
 To connect variable inputs, perform the following:
 
-    1. Edit the visualization of a dashboard item. See :ref:`Editing Item Visualizations and Visualization Settings <Editing Item Visualizations and Visualization Settings>` for more information if needed.
+    1. Edit the visualization of a dashboard item. See :ref:`Editing Items <Editing Items>` for more information if needed.
     2. For the visualization argument that will use the variable input, connect it to the variable input by doing the following:
 
         - If the argument is a **dropdown**, scroll to the bottom of the list and there is a section of "Variable Inputs". Select the desired variable input.

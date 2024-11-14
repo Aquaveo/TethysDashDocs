@@ -42,7 +42,7 @@ Contents
 .. toctree::
    :maxdepth: 2
 
-   usage
+   usage/usage
    variable_inputs
    plugins
    feedback

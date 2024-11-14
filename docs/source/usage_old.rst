@@ -1,7 +1,7 @@
 Dashboard Usage
 ===============
 
-.. _dashboard_usage:
+.. _dashboard_usage_old:
 
 Create a Dashboard
 ------------------
@@ -72,11 +72,11 @@ of the item
 .. image:: ../images/dashboard_resize_handler.png
    :align: center
 
-.. _Editing Item Visualizations and Visualization Settings:
+.. _Editing Items:
 
-======================================================
-Editing Item Visualizations and Visualization Settings
-======================================================
+=============
+Editing Items
+=============
 
 Once in edit mode, each dashboard item will have a 3 dot menu in the top right corner. Click on the 3 dot menu and 
 select the "Edit Visualization" option. The left side menu is used to configure the desired visualization. The right 
@@ -85,25 +85,22 @@ side is a preview so that the user can know exactly what they will be seeing in 
 .. image:: ../images/dashboard_edit_menu.png
    :align: center
 
-A popup will appear where the user can search available visualization options and select the desired configuration for 
-the dashboard item. For more information about visualizations and creating new options, see the :doc:`plugins` section.
+A popup will appear that is split into two areas. The area on the left contains tabs and options to set up the 
+visualization and any desired settings. The area on the right is used to preview the visualization to ensure that it 
+is configured properly. 
 
-------------
-Refresh Rate
-------------
+-----------------
+Visualization Tab
+-----------------
 
-The refresh rate indicates how often a visualization should update automatically on the dashboard. This setting is 
-used for when visualizations may update due to new data being available. Instead of having to refresh the entire 
-dashboard to check for new data, this setting will do it automatically at the desired refresh rate for the specified 
-dashboard item. A refresh rate of 0 indicates that it will not refresh.
-
--------------------------------------------
+```````````````````````````````````````````
 Visualization Type and Additional Arguments
--------------------------------------------
+```````````````````````````````````````````
 
-Determines the type of visualization that will be displayed. Once a visualization type is selected, more 
-options/arguments may appear that are visualization specific. These additional arguments are used to select specific 
-values needed for the visualizations.
+Determines the type of visualization that will be displayed. For more information about visualizations and creating 
+new options, see the :doc:`plugins` section. Once a visualization type is selected, more options/arguments may appear 
+that are visualization specific. These additional arguments are used to select specific values needed for the 
+visualizations. 
 
 For example, if an option is selected for a chart that shows a hydrologic forecast, the visualization also needs to 
 know which location to check. In this example, a new option may appear so that the user can choose which location to 
@@ -119,38 +116,62 @@ view.
    .. image:: ../images/dropdown_search.png
       :align: center
 
-`````````````````````
+:::::::::::::::::::::
 Custom Visualizations
-`````````````````````
+:::::::::::::::::::::
 Most visualizations that are available are custom visualizations based on installed plugins. For more information about 
 visualizations, see the :doc:`plugins` section.
 
 Additional Arguments:
    - Additional Arguments shown for custom visualizations are dependent on the visualization and will dynamically update depending on the selection.
 
-````````````
+::::::::::::
 Custom Image
-````````````
+::::::::::::
 This visualization will allow users to add a publicly accessible image to their dashboards. 
 
 Additional Arguments:
    - **Image Source:** A url to the image.
 
-````
+::::
 Text
-````
+::::
 This visualization will allow users to display text. Users can write the text on the right side of the modal and add 
 headings and styles as desired. 
 
-``````````````
+::::::::::::::
 Variable Input
-``````````````
+::::::::::::::
 This visualization will create a variable that can be refenced from other visualizations for dynamic changing of 
 dashboard items. For more information on how this works, see the :doc:`variable_inputs` section
 
 Additional Arguments:
    - **Variable Name:** Name of the variable input
    - **Variable Options Source:** Refers to the type of variable input and where the possible values can be derived from.
+
+------------
+Settings Tab
+------------
+
+Visualization can each have individual settings that apply to that visualization only. Some settings are available for 
+all visualizations, while others may only be application to certain types of visualizations. Below is a list of 
+possible visualization settings.
+
+`````````````````````````````````
+Refresh Rate (All Visualizations)
+`````````````````````````````````
+
+The refresh rate indicates how often a visualization should update automatically on the dashboard. This setting is 
+used for when visualizations may update due to new data being available. Instead of having to refresh the entire 
+dashboard to check for new data, this setting will do it automatically at the desired refresh rate for the specified 
+dashboard item. A refresh rate of 0 indicates that it will not refresh.
+
+````````````````````````````````````````````
+Enforce Aspect Ratio  (Image Visualizations)
+````````````````````````````````````````````
+
+The enforce aspect ratio option will cause any resizing of the visualization to keep the original aspect ratio from 
+the image source. 
 
 --------------------------
 Saving Item Visualizations
