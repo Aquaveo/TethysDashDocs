@@ -6,8 +6,8 @@ project = 'TethysDash'
 copyright = '2024, Aquaveo'
 author = 'Corey Krewson'
 
-release = '0.2'
-version = '0.2.6'
+release = '0.4'
+version = '0.4.0'
 
 # -- General configuration
 
