@@ -40,7 +40,7 @@ Contents
 --------
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
 
    usage/usage
    variable_inputs
