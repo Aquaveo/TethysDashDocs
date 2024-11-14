@@ -1,5 +1,5 @@
 Reverting Items
-------------
+---------------
 
 .. _revert_dashboard_items:
 
@@ -8,3 +8,8 @@ Reverting Items
 
 Users can revert their dashboard configuration to the previously saved sate by clicking on the 
 |dashboard_revert_button| button next to the dashboard dropdown at the top of the application.
+
+.. image:: ../../images/revert_dashboard.png
+   :align: center
+
+|

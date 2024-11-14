@@ -13,3 +13,7 @@ To delete an existing dashboard, perform the following steps:
    3. Click on the "Delete dashboard" button at the bottom of the settings panel.
    4. You will be prompted if you would actually like to delete the dashboard. Click "OK" to delete or click "cancel" to not delete it.
 
+.. image:: ../../images/save_dashboard_settings.png
+   :align: center
+
+|

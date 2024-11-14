@@ -14,12 +14,13 @@ dashboard items will appear.
 .. image:: ../../images/dashboard_edit_mode.png
    :align: center
 
+|
+
 .. toctree::
    :maxdepth: 1
 
    add_dashboard_items
-   move_dashboard_items
-   resize_dashboard_items
+   move_resize_dashboard_items
    edit_dashboard_item_visualizations
    copy_dashboard_items
    delete_dashboard_items

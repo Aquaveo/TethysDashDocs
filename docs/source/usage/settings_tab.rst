@@ -1,5 +1,5 @@
 Settings Tab
------------------
+------------
 
 .. _settings_tab:
 
@@ -22,3 +22,5 @@ Enforce Aspect Ratio  (Image Visualizations)
 
 The enforce aspect ratio option will cause any resizing of the visualization to keep the original aspect ratio from 
 the image source. 
+
+|

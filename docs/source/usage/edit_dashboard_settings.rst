@@ -10,10 +10,6 @@ When a dashboard is selected in the dashboard dropdown, a hamburger (|dashboard_
 on the left in the application header. Click on the hamburger button to open up the dashboard settings menu. If the 
 selected dashboard was created by the user, then all settings can be changed and saved.
 
-.. image:: ../../images/dashboard_settings.png
-   :scale: 50%
-   :align: center
-
 ====
 Name
 ====
@@ -55,3 +51,9 @@ Saving Dashboard Settings
 =========================
 
 To persist any setting changes, click on the "Save changes" button on the bottom of the dashboard settings panel.
+
+
+.. image:: ../../images/save_dashboard_settings.png
+   :align: center
+
+|

@@ -12,4 +12,7 @@ To copy an existing dashboard, perform the following steps:
    2. Click on the hamburger (|dashboard_settings_button|) button on left in the header to open up the settings.
    3. Click on the "Copy dashboard" button at the bottom of the settings panel.
 
+.. image:: ../../images/save_dashboard_settings.png
+   :align: center
 
+|

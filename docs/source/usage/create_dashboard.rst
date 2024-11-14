@@ -22,8 +22,4 @@ To create a new dashboard, do the following:
 
    4. Click on the "Create" button
 
-After creating the dashboard, the user will be taken to the newly created dashboard 
-automatically. To learn more about editing the contents and settings of the dashboard, see the 
-`Edit Dashboard Items <Edit Dashboard Items_>`_ and `Edit Dashboard Settings <Edit Dashboard Settings_>`_ sections.
-
-
+|
