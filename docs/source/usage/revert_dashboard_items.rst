@@ -1,7 +1,7 @@
+.. _revert_dashboard_items:
+
 Reverting Items
 ---------------
-
-.. _revert_dashboard_items:
 
 .. |dashboard_revert_button| image:: ../../images/dashboard_revert_button.png
    :scale: 50%

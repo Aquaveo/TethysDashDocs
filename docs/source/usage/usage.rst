@@ -1,7 +1,7 @@
+.. _dashboard_usage:
+
 Dashboard Usage
 ===============
-
-.. _dashboard_usage:
 
 This section will provide information on using the core TethysDash functionality of creating, editing, and deleting 
 dashboards. 

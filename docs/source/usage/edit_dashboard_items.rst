@@ -1,7 +1,7 @@
+.. _edit_dashboard_items:
+
 Edit Dashboard Items
 --------------------
-
-.. _edit_dashboard_items:
 
 .. |dashboard_edit_button| image:: ../../images/dashboard_edit_button.png
    :scale: 50%

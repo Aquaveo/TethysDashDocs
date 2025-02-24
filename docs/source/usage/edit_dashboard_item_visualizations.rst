@@ -1,7 +1,7 @@
+.. _edit_dashboard_item_visualizations:
+
 Edit Item Visualizations
 ------------------------
-
-.. _edit_dashboard_item_visualizations:
 
 Once in edit mode, each dashboard item will have a 3 dot menu in the top right corner. Click on the 3 dot menu and 
 select the "Edit Visualization" option. 

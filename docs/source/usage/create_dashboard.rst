@@ -1,7 +1,7 @@
+.. _create_dashboard:
+
 Create a Dashboard
 ==================
-
-.. _create_dashboard:
 
 To create a new dashboard, do the following:
 

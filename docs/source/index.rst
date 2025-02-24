@@ -30,7 +30,7 @@ Data Analysis
 
 |
 
-To learn more about creating and using dashboards, see the :doc:`usage` section.
+To learn more about creating and using dashboards, see the :ref:`dashboard_usage` section.
 
 .. note::
 
@@ -45,4 +45,5 @@ Contents
    usage/usage
    variable_inputs
    plugins
+   maps/maps
    feedback
