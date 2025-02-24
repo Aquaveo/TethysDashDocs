@@ -1,7 +1,7 @@
+.. _variableinputs:
+
 Variable Inputs
 ===============
-
-.. _variableinputs:
 
 Variable inputs are a way to make dashboards more dynamic. Instead of making multiple dashboards to view the same 
 visualizations with slightly different arguments, users can use variable inputs to dynamically change visualizations 

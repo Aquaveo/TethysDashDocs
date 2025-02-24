@@ -22,3 +22,4 @@ explanation for each tab.
    source_tab
    style_tab
    legend_tab
+   attributes_and_popups_tab
