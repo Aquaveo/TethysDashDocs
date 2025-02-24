@@ -1,7 +1,7 @@
+.. _save_dashboard_items:
+
 Saving Items
 ------------
-
-.. _save_dashboard_items:
 
 .. |dashboard_save_button| image:: ../../images/dashboard_save_button.png
    :scale: 50%

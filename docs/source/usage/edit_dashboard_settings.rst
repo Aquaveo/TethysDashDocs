@@ -1,7 +1,7 @@
+.. _edit_dashboard_settings:
+
 Edit Dashboard Settings
 -----------------------
-
-.. _edit_dashboard_settings:
 
 .. |dashboard_settings_button| image:: ../../images/dashboard_settings_button.png
    :scale: 50%

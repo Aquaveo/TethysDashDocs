@@ -1,7 +1,8 @@
+.. _visualization_tab:
+
 Visualization Tab
 -----------------
 
-.. _visualization_tab:
 
 The visualization tab is used to select and configure the visualization that will be shown within the dashboard item.
 
@@ -41,6 +42,20 @@ visualizations, see the :doc:`../plugins` section.
 Additional Arguments:
    - Additional Arguments shown for custom visualizations are dependent on the visualization and will dynamically update depending on the selection.
 
+------------------------------------------------------------------------------------------------------------------------
+
+:::
+Map
+:::
+This visualization will allow users to add a map to their dashboards. For more information about creating a map, see the :doc:`maps/maps` section 
+
+Additional Arguments:
+   - **Base Map:** A list of available basemaps to use for the map
+   - **Additional Layers:** Click on the "Add Layer" button to add to new layer to the map. Users can also edit or delete existing layers from the provide summary table
+   - **Show Layer Controls:** Determines if a layer control menu will be added to the map for users to toggle layers
+    
+------------------------------------------------------------------------------------------------------------------------
+
 ::::::::::::
 Custom Image
 ::::::::::::
@@ -49,11 +64,15 @@ This visualization will allow users to add a publicly accessible image to their 
 Additional Arguments:
    - **Image Source:** A url to the image.
 
+------------------------------------------------------------------------------------------------------------------------
+
 ::::
 Text
 ::::
 This visualization will allow users to display text. Users can write the text on the right side of the modal and add 
 headings and styles as desired. 
+
+------------------------------------------------------------------------------------------------------------------------
 
 ::::::::::::::
 Variable Input

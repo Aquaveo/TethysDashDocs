@@ -1,7 +1,7 @@
+.. _visualizationplugins:
+
 Visualization Plugins
 =====================
-
-.. _visualizationplugins:
 
 Dashboard visualizations plugins are based on the `intake <https://github.com/intake/intake>`_ python package and can 
 be developed following the information found in the 
@@ -16,7 +16,7 @@ Development
 Creating a repository
 =====================
 
-Before developing a plugin, you will need to create a new repository for the plugin. This will ensure that others 
+Before developing a plugin, a new repository will need to be created for the plugin. This will ensure that others 
 users can clone and install the package as needed. The file structure is up to the developer but the repository must 
 include a setup.py, which will be addressed in the `Installation <Installation_>`_  section.
 
@@ -56,7 +56,7 @@ classes for base.DataSource, refer to the intake
 Properties:
     - **container**: This will almost always be "python" which means the intake driver will return a python object.
     - **version**: version of the package
-    - **name**: name of the package. This is the name that will be used for installation. In order to use the driver, you will call `intake.open_<driver_name>`.
+    - **name**: name of the package. This is the name that will be used for installation. When using the plugin, intake will open it using the syntax `intake.open_<driver_name>`.
     - **visualization_args**: This a property specific for the dashboard app. This is a dictionary containing the function arguments as keys with the data type as the value. This dictionary will be parsed in the application to dynamically create html inputs for the users. Values can be `HTML Input Types <https://www.w3schools.com/html/html_form_input_types.asp>`_ or a list of values for a dropdown menu (i.e. `{"year": "number", "location": "text", "available_colors": ["red", "blue", "white"]}`).
     - **visualization_group**: This a property specific for the dashboard app. List visualizations in the dashboard application will be grouped based on this property.
     - **visualization_label**: This a property specific for the dashboard app. Describes the formal name of the visualization that will be displayed in the visualization list in the dashboard app.
@@ -490,8 +490,10 @@ is based on OpenLayers and follows similar configurations for configs and layers
 
 |
 
-Custom
-``````
+.. _custom_visualization:
+
+Custom Visualization
+````````````````````
 
 Displays a custom visualization from a custom react component.
 
@@ -660,7 +662,7 @@ Testing
 =======
 
 To test the plugin, simply run python in a command prompt or jupyter notebook, initialize the created class, and run 
-the read method. As shown below, you can supply various arguments and run the desired workflows.
+the read method. As shown below, various arguments and scenarios can be configured and run the desired workflows.
 
 .. image:: ../images/plugin_example.png
    :align: center

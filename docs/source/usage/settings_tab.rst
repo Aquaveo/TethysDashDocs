@@ -1,7 +1,7 @@
+.. _settings_tab:
+
 Settings Tab
 ------------
-
-.. _settings_tab:
 
 Visualization can each have individual settings that apply to that visualization only. Some settings are available for 
 all visualizations, while others may only be application to certain types of visualizations. Below is a list of 

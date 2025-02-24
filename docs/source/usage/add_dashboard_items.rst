@@ -1,7 +1,7 @@
+.. _add_dashboard_items:
+
 Adding New Items
 ----------------
-
-.. _add_dashboard_items:
 
 .. |dashboard_add_item_button| image:: ../../images/dashboard_add_item_button.png
    :scale: 50%
