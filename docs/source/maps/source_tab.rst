@@ -9,6 +9,8 @@ source properties will appear for further customizations and setup. Some propert
 others are optional. Source type options are predefined and currently consist of the following options with their available 
 properties. 
 
+------------------------------------------------------------------------------------------------------------------------
+
 +++++++++++++++
 ImageArcGISRest
 +++++++++++++++
@@ -22,6 +24,8 @@ ImageArcGISRest
     - **params - TIME:** (optional) The time instant or time extent of the exported map image. Syntax is in the form of "<timeInstant>" or "<startTime>, <endTime>". See `ESRI documentation <https://developers.arcgis.com/rest/services-reference/enterprise/export-map/>`_ for more information.
     - **params - LAYERDEFS:** (optional) Allows you to filter the features of individual layers in the exported map by specifying definition expressions for those layers. Syntax is in the form of "{"<layerId1>": "<layerDef1>", "<layerId2>": "<layerDef2>"}". See `ESRI documentation <https://developers.arcgis.com/rest/services-reference/enterprise/export-map/>`_ for more information.
     - **projection:** (optional) Projection of the source data. Default is the view projection (EPSG:3857).
+
+------------------------------------------------------------------------------------------------------------------------
 
 ++++++++
 ImageWMS
@@ -37,6 +41,8 @@ ImageWMS
     - **params - TIME:** (optional) Time value of layer desired.  Syntax is in the form of "yyyy-MM-ddThh:mm:ss.SSSZ".
     - **projection:** (optional) Projection. Default is the view projection (EPSG:3857)
 
+------------------------------------------------------------------------------------------------------------------------
+
 +++++++++
 ImageTile
 +++++++++
@@ -47,6 +53,8 @@ ImageTile
     - **url:** (required) Image Tile URL.
     - **attributions:** (optional) Attributions.
     - **projection:** (optional) Projection. Default is the view projection (EPSG:3857)
+
+------------------------------------------------------------------------------------------------------------------------
 
 ++++++++
 GeoJSON
@@ -72,6 +80,8 @@ value for projection information. A example of a valid GeoJSON is::
             }
         }]
     }
+
+------------------------------------------------------------------------------------------------------------------------
 
 ++++++++++
 VectorTile
