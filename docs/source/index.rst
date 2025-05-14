@@ -42,6 +42,7 @@ Contents
 .. toctree::
    :maxdepth: 3
 
+   usage/landing_page
    usage/usage
    variable_inputs
    plugins

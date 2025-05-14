@@ -6,8 +6,8 @@ Saving Items
 .. |dashboard_save_button| image:: ../../images/dashboard_save_button.png
    :scale: 50%
 
-Users can save their dashboard configuration by clicking on the |dashboard_save_button| button next to the dashboard 
-dropdown at the top of the app. These saved changes will persist when the application is refreshed or revisited. 
+Users can save their dashboard configuration by clicking on the |dashboard_save_button| button in the app header. 
+These saved changes will persist when the application is refreshed or revisited. 
 
 .. image:: ../../images/save_dashboard.png
    :align: center

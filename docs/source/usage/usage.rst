@@ -3,14 +3,18 @@
 Dashboard Usage
 ===============
 
-This section will provide information on using the core TethysDash functionality of creating, editing, and deleting 
-dashboards. 
+This section will provide information on using, editing, and deleting dashboards. Each dashboard is compised of dashboard 
+items, which are configurable and moveable visualizations. 
+
+.. image:: ../../images/dashboard.png
+   :align: center
+   :scale: 60%
    
+|
 
 .. toctree::
    :maxdepth: 2
 
-   create_dashboard
    edit_dashboard_items
    edit_dashboard_settings
    share_dashboard

@@ -53,7 +53,7 @@ To connect variable inputs, perform the following:
             .. image:: ../images/variable_input_usage.png
                 :align: center
 
-        - If the argument is a **text** input, set the value to be "**${Variable Input Name}**" 
+        - If the argument is a **text** input, set the value to be "**${Variable Input Name}**"
 
             .. image:: ../images/variable_input_usage_text.png
                 :align: center

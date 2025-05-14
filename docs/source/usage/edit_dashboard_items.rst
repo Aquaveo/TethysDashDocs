@@ -7,7 +7,7 @@ Edit Dashboard Items
    :scale: 50%
 
 Users are only able to edit dashboards that they have created. Once a user created dashboard is selected, 
-click on the |dashboard_edit_button| button next to the dashboard dropdown at the top of the app to turn 
+click on the |dashboard_edit_button| button in the right side of the app header to turn 
 on edit mode. Once in edit mode, additional buttons for reverting changes, saving changes, and adding new 
 dashboard items will appear.
 

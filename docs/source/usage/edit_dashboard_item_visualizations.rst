@@ -20,4 +20,3 @@ is configured properly.
 
    visualization_tab
    settings_tab
-   save_dashboard_item_visualizations

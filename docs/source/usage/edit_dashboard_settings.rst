@@ -4,10 +4,10 @@ Edit Dashboard Settings
 -----------------------
 
 .. |dashboard_settings_button| image:: ../../images/dashboard_settings_button.png
-   :scale: 50%
+   :scale: 10%
 
-When a dashboard is selected in the dashboard dropdown, a hamburger (|dashboard_settings_button|) button will appear 
-on the left in the application header. Click on the hamburger button to open up the dashboard settings menu. If the 
+When a dashboard is selected in the dashboard dropdown, a settings (|dashboard_settings_button|) button will appear 
+in the app header. Click on the settings button to open up the dashboard settings menu. If the 
 selected dashboard was created by the user, then all settings can be changed and saved.
 
 ====
@@ -20,15 +20,12 @@ only be letters and numbers and cannot include any special characters.
 Users cannot create multiple dashboards of their own with the same name. A dashboard with the same name as a public 
 dashboard can be created but it cannot be made public with that same name.
 
-=====
-Label
-=====
+===========
+Description
+===========
 
-Indicates the dashboard label. This is the text that will appear in the dashboard dropdown and can include spaces and 
-special characters.
-
-Users cannot create multiple dashboards of their own with the same label. A dashboard with the same label as a public 
-dashboard can be created but it cannot be made public with that same label.
+Indicates the dashboard description. This is the text that will appear when hovering over the dashboard card in the 
+landing page of the application. 
 
 ==============
 Sharing Status
@@ -37,7 +34,13 @@ Sharing Status
 Indicates if the dashboard will be private (only accessible to the user) or public (accessible to anyone). Public 
 dashboards are accessible to anyone but can only be edited by the user who created it.
 
-No public dashboards can have the same name or the same label.
+No public dashboards can have the same name.
+
+================================
+Unrestricted Grid Item Placement
+================================
+
+Indicates if the dashboard items can be placed anywhere in the dashboard, including overlapping. 
 
 =====
 Notes
@@ -51,9 +54,3 @@ Saving Dashboard Settings
 =========================
 
 To persist any setting changes, click on the "Save changes" button on the bottom of the dashboard settings panel.
-
-
-.. image:: ../../images/save_dashboard_settings.png
-   :align: center
-
-|

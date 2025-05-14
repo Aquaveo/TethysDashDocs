@@ -26,7 +26,8 @@ view.
 
 .. tip::
 
-   Users can type with dropdowns to search for and subset options as shown below.
+   Users can type with dropdowns to search for and subset options as shown below. They can also add a new option through typing 
+   and selecting the 'Use ...' option.
    
    .. image:: ../../images/dropdown_search.png
       :align: center
@@ -47,7 +48,7 @@ Additional Arguments:
 :::
 Map
 :::
-This visualization will allow users to add a map to their dashboards. For more information about creating a map, see the :doc:`maps/maps` section 
+This visualization will allow users to add a map to their dashboards. For more information about creating a map, see the :ref:`maps` section 
 
 Additional Arguments:
    - **Base Map:** A list of available basemaps to use for the map

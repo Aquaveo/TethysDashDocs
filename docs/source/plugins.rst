@@ -7,7 +7,8 @@ Dashboard visualizations plugins are based on the `intake <https://github.com/in
 be developed following the information found in the 
 `Making Driver <https://intake.readthedocs.io/en/latest/making-plugins.html>`_  documentation. This section will cover 
 the requirements needed to make plugins specifically for this application, including necessary setup, properties, 
-and methods. An example plugin can be found `here <https://github.com/FIRO-Tethys/tethysdash_plugin_usace/tree/main>`_.
+and methods. The `TethysDash Plugin Template respository <https://github.com/FIRO-Tethys/tethysdash_plugin_template>`_ is 
+a good place to look at examples of how to create TethysDash plugins.
 
 Development
 -----------
@@ -17,8 +18,9 @@ Creating a repository
 =====================
 
 Before developing a plugin, a new repository will need to be created for the plugin. This will ensure that others 
-users can clone and install the package as needed. The file structure is up to the developer but the repository must 
-include a setup.py, which will be addressed in the `Installation <Installation_>`_  section.
+users can clone and install the package as needed. The file structure is up to the developer but following the structure in 
+the `TethysDash Plugin Template respository <https://github.com/FIRO-Tethys/tethysdash_plugin_template>`_ will ensure 
+that they all work as expected. 
 
 =======================
 Intake DataSource Class
@@ -39,7 +41,7 @@ is an example of a simple intake driver example::
         visualization_label = "Example Plot"
         visualization_type = "plotly"
 
-        def __init__(self, continent, github_kwargs={}, metadata=None):
+        def __init__(self, continent, github_kwargs={}, metadata=None. **kwargs):
             self.continent = continent
             super(PlotExample, self).__init__(metadata=metadata)
 
@@ -61,7 +63,8 @@ Properties:
     - **visualization_group**: This a property specific for the dashboard app. List visualizations in the dashboard application will be grouped based on this property.
     - **visualization_label**: This a property specific for the dashboard app. Describes the formal name of the visualization that will be displayed in the visualization list in the dashboard app.
     - **visualization_type**: This a property specific for the dashboard app. Describes the type of visualization this is created. Can be "plotly", "table","image", "card", "map", or "custom". See the `Plugin Visualization Types <Plugin Visualization Types_>`_ section and the "Visualization Type Argument" for more information. 
-
+    - **visualization_description**: This a property specific for the dashboard app. Provides a description of the visualization. 
+    - **visualization_tags**: This a property specific for the dashboard app. An array of tags used for visualization search and discovery.
 Methods:
     - **init**: This is a typical python class **init** method. Set any class specific properties here for the visualization, such as the "continent" property in the example above.
     - **read**: This is the main function that developers will want to focus on. The dashboard app will call this method and use the results as the visualization data.
@@ -99,56 +102,55 @@ Displays a `Plotly <https://plotly.com/python/>`_ chart with the provided data, 
         visualization_group = "Example"
         visualization_label = "Plotly Example"
         visualization_type = "plotly"
+        visualization_tags = [
+            "example",
+            "plotly",
+        ]
+        visualization_description = "An example plugin for the plotly visualization"
 
         def __init__(self, metadata=None):
-            super(TableExample, self).__init__(metadata=metadata)
+            super(PlotlyExample, self).__init__(metadata=metadata)
 
         def read(self):
             """
-                Return plotly information
+            Return plotly information
             """
             data = [
                 {
                     "type": "scatter",  # all "scatter" attributes: https://plotly.com/javascript/reference/#scatter
-                    "x": [1, 2, 3],     # more about "x": #scatter-x
-                    "y": [3, 1, 6],     # #scatter-y
-                    "marker": {         # marker is an object, valid marker keys: #scatter-marker
-                        "color": "rgb(16, 32, 77)" # more about "marker.color": #scatter-marker-color
-                    }
+                    "x": [1, 2, 3],  # more about "x": #scatter-x
+                    "y": [3, 1, 6],  # #scatter-y
+                    "marker": {  # marker is an object, valid marker keys: #scatter-marker
+                        "color": "rgb(16, 32, 77)"  # more about "marker.color": #scatter-marker-color
+                    },
                 },
                 {
-                    "type": "bar",      # all "bar" chart attributes: #bar
-                    "x": [1, 2, 3],     # more about "x": #bar-x
-                    "y": [3, 1, 6],     # #bar-y
-                    "name": "bar chart example"  #bar-name
-                }
+                    "type": "bar",  # all "bar" chart attributes: #bar
+                    "x": [1, 2, 3],  # more about "x": #bar-x
+                    "y": [3, 1, 6],  # #bar-y
+                    "name": "bar chart example",  # bar-name
+                },
             ]
 
-            layout = {                     # all "layout" attributes: #layout
+            layout = {  # all "layout" attributes: #layout
                 "title": "simple example",  # more about "layout.title": #layout-title
-                "xaxis": {                  # all "layout.xaxis" attributes: #layout-xaxis
-                    "title": "time"         # more about "layout.xaxis.title": #layout-xaxis-title
+                "xaxis": {  # all "layout.xaxis" attributes: #layout-xaxis
+                    "title": "time"  # more about "layout.xaxis.title": #layout-xaxis-title
                 },
-                "annotations": [            # all "annotation" attributes: #layout-annotations
+                "annotations": [  # all "annotation" attributes: #layout-annotations
                     {
-                        "text": "simple annotation",    # #layout-annotations-text
-                        "x": 0,                         # #layout-annotations-x
-                        "xref": "paper",                # #layout-annotations-xref
-                        "y": 0,                         # #layout-annotations-y
-                        "yref": "paper"                 # #layout-annotations-yref
+                        "text": "simple annotation",  # #layout-annotations-text
+                        "x": 0,  # #layout-annotations-x
+                        "xref": "paper",  # #layout-annotations-xref
+                        "y": 0,  # #layout-annotations-y
+                        "yref": "paper",  # #layout-annotations-yref
                     }
-                ]
+                ],
             }
 
-            config = {
-                "displayModeBar": True
-            }
+            config = {"displayModeBar": True}
 
-            return {
-                "data": data,
-                "layout": layout,
-                "config": config
-            }
+            return {"data": data, "layout": layout, "config": config}
 
 |
 
@@ -166,6 +168,7 @@ Displays a table from the provided data.
 
 **read return: (dictionary)**
     - **title** (required): The title to display above the table
+    - **subtitle** (optional): The subtitle to display above the table
     - **data** (required): A list of dictionaries containing keys/values for columns and rows respectively.
 
 **Example**: ::
@@ -180,6 +183,11 @@ Displays a table from the provided data.
         visualization_group = "Example"
         visualization_label = "Table Example"
         visualization_type = "table"
+        visualization_tags = [
+            "example",
+            "table",
+        ]
+        visualization_description = "An example plugin for the table visualization"
 
         def __init__(self, metadata=None):
             super(TableExample, self).__init__(metadata=metadata)
@@ -207,9 +215,11 @@ Displays a table from the provided data.
                 },
             ]
             title = "User Information"
+            subtitle = "Some Subtitle"
 
             return {
                 "title": title,
+                "subtitle": subtitle,
                 "data": data
             }
 
@@ -234,6 +244,7 @@ Displays an image based on the returned URL string.
 
     from intake.source import base
 
+
     class ImageExample(base.DataSource):
         container = "python"
         version = "0.0.1"
@@ -242,16 +253,21 @@ Displays an image based on the returned URL string.
         visualization_group = "Example"
         visualization_label = "Image Example"
         visualization_type = "image"
+        visualization_tags = [
+            "example",
+            "image",
+        ]
+        visualization_description = "An example plugin for the image visualization"
 
         def __init__(self, metadata=None):
             super(ImageExample, self).__init__(metadata=metadata)
 
         def read(self):
             """
-                Return an image url
+            Return an image url
             """
 
-            return "https://www.aquaveo.com/images/aquaveo_logo.svg"
+            return "https://aquaveo.com/pub/media/wysiwyg/aquaveo-logo-bw.svg"
 
 |
 
@@ -288,6 +304,11 @@ value, label, and icon.
         visualization_group = "Example"
         visualization_label = "Card Example"
         visualization_type = "card"
+        visualization_tags = [
+            "example",
+            "card",
+        ]
+        visualization_description = "An example plugin for the card visualization"
 
         def __init__(self, metadata=None):
             super(CardExample, self).__init__(metadata=metadata)
@@ -325,12 +346,111 @@ value, label, and icon.
 
 |
 
+Text
+````
+
+Displays custom text
+
+.. image:: ../images/text_example.png
+    :align: center
+
+|
+
+**DataSource visualization_type value:** *text*
+
+**read return: (dictionary)**
+    - **text** (required): The text to show.
+
+**Example**: ::
+
+    from intake.source import base
+
+    class TextExample(base.DataSource):
+        container = "python"
+        version = "0.0.1"
+        name = "text_example"
+        visualization_args = {}
+        visualization_group = "Example"
+        visualization_label = "Text Example"
+        visualization_type = "text"
+        visualization_tags = [
+            "example",
+            "text",
+        ]
+        visualization_description = "An example plugin for the text visualization"
+
+        def __init__(self, metadata=None):
+            super(TextExample, self).__init__(metadata=metadata)
+
+        def read(self):
+            """
+                Return the data for the text
+            """
+
+            return {"text": "Here is some text"}
+
+|
+
+Variable Input
+``````````````
+
+Displays a variable input
+
+.. image:: ../images/variable_input_example.png
+    :align: center
+
+|
+
+**DataSource visualization_type value:** *variable_input*
+
+**read return: (dictionary)**
+    - **variable_name** (required): Name of the variable input
+    - **initial_value** (required): Initial value of the variable input
+    - **variable_options_source** (required): can be "text", "number", "checkbox", and array (as shown in the example)
+
+**Example**: ::
+
+    from intake.source import base
+
+    class VariableInputExample(base.DataSource):
+        container = "python"
+        version = "0.0.1"
+        name = "variable_input_example"
+        visualization_args = {}
+        visualization_group = "Example"
+        visualization_label = "Variable Input Example"
+        visualization_type = "variable_input"
+        visualization_tags = [
+            "example",
+            "variable input",
+        ]
+        visualization_description = "An example plugin for the variable input visualization"
+
+        def __init__(self, metadata=None):
+            super(VariableInputExample, self).__init__(metadata=metadata)
+
+        def read(self):
+            """
+                Return the data for the text
+            """
+            layer_names = [
+                {"label": "Observed River Stage", "value": 0},
+                {"label": "River Stages 24 Hour Forecast", "value": 1},
+            ]
+
+            return {
+                "variable_name": "Layer Name",
+                "initial_value": "",
+                "variable_options_source": layer_names,
+            }
+
+|
+
 Map
 ```
 
-Displays a map with the given layers and configuration. The map visualization is configured using the 
-`backlayer <https://github.com/Aquaveo/backlayer/tree/main>`_ npm package made by Aquaveo. The map visualization 
-is based on OpenLayers and follows similar configurations for configs and layers.
+Displays a map with the given layers and configuration. The map visualization is based on OpenLayers and follows similar 
+configurations for configs and layers.
 
 .. image:: ../images/map_example.png
     :align: center
@@ -340,16 +460,22 @@ is based on OpenLayers and follows similar configurations for configs and layers
 **DataSource visualization_type value:** *map*
 
 **read return: (dictionary)**
-    - **mapConfig** (required): Dictionary containing styling and classes for map container.
-    - **viewConfig** (required): Dictionary containing configurations for the map view. Check `OpenLayers documentation <https://openlayers.org/en/latest/apidoc/module-ol_View-View.html>`_ for more information.
-    - **layers** (required): A list of layers to include in the map. Check `here <https://github.com/Aquaveo/backlayer/tree/main?tab=readme-ov-file#layer>`_ for more information.
-    - **legend** (required): A list of dictionaries containing information about the legend.
+    - **baseMap** (required): string for ESRI BaseMap Layers
+    - **viewConfig** (optional): Dictionary containing configurations for the map view. Check `OpenLayers documentation <https://openlayers.org/en/latest/apidoc/module-ol_View-View.html>`_ for more information.
+    - **mapConfig** (optional): Dictionary containing configurations for the map view div.
+    - **layers** (optional): A list of layers to include in the map. The following keys can be in each object in the array.
+        - **configuration** (required): See maps :ref:`source_tab` for more information. 
+        - **attributeVariables** (Optional): an object that maps a layers name (key) with the layers field and desired variable inputs to update the field value. See maps :ref:`attributes_and_popups_tab` for more information.
+        - **legend** (required): an object that contains a title key and items key. The items key value is an array of object with label and color keys for the legend.
+        - **style** (required): See maps :ref:`legend_tab` for more information.
+    - **layerControl** (optional): A boolean indicating if a layer control should be available.
 
 **Example**: ::
 
     from intake.source import base
 
-    class MapExample(base.DataSource):
+
+    class Plots(base.DataSource):
         container = "python"
         version = "0.0.1"
         name = "map_example"
@@ -357,135 +483,64 @@ is based on OpenLayers and follows similar configurations for configs and layers
         visualization_group = "Example"
         visualization_label = "Map Example"
         visualization_type = "map"
+        visualization_tags = [
+            "example",
+            "map",
+        ]
+        visualization_description = "An example plugin for the map visualization"
 
-        def __init__(self, metadata=None):
-            super(MapExample, self).__init__(metadata=metadata)
+        def __init__(self, metadata=None, **kwargs):
+            super(Plots, self).__init__(metadata=metadata)
 
         def read(self):
-            """
-                Return the configuration for the map
-            """
-
-            mapConfig = {
-                'className': 'ol-map',
-                'style': {
-                    'width': '100%',
-                    'height': '100vh',
-                },
-            }
-
-            viewConfig = {
-                'center': [-110.875, 37.345],
-                'zoom': 5,
-            }
-
-            layers = [
-                {
-                    'type': 'WebGLTile',
-                    'props': {
-                    'source': {
-                        'type': 'ImageTile',
-                        'props': {
-                        'url': 'https://server.arcgisonline.com/arcgis/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}',
-                        'attributions':
-                            'Tiles © <a href="https://server.arcgisonline.com/arcgis/rest/services/Canvas/World_Dark_Gray_Base/MapServer">ArcGIS</a>',
-                        },
-                    },
-                    'name': 'World Dark Gray Base Base Map',
-                    'zIndex': 0,
-                    },
-                },
-                {
-                    'type': 'ImageLayer',
-                    'props': {
-                    'source': {
-                        'type': 'ImageArcGISRest',
-                        'props': {
-                        'url': 'https://mapservices.weather.noaa.gov/eventdriven/rest/services/water/riv_gauges/MapServer',
-                        'params': {
-                            'LAYERS': 'show:0',
-                        },
-                        },
-                    },
-                    'name': 'Flooding River Gauges',
-                    'zIndex': 1,
-                    },
-                },
-                {
-                    'type': 'VectorLayer',
-                    'props': {
-                    'source': {
-                        'type': 'Vector',
-                        'props': {
-                        'url': 'https://services3.arcgis.com/GVgbJbqm8hXASVYi/arcgis/rest/services/Parks_and_Open_Space/FeatureServer/0/query?where=1%3D1&outFields=*&returnGeometry=true&f=geojson',
-                        'format': {
-                            'type': 'GeoJSON',
-                            'props': {},
-                        },
-                        },
-                    },
-                    'style': {
-                        'type': 'Style',
-                        'props': {
-                        'stroke': {
-                            'type': 'Stroke',
-                            'props': {
-                            'color': '#501020',
-                            'width': 1,
-                            },
-                        },
-                        },
-                    },
-                    'name': 'rfc max forecast (Decreasing Forecast Trend)',
-                    'zIndex': 2,
-                    },
-                },
-            ]
-
-            legend = [
-                {
-                    'label': 'Major Flood',
-                    'color': '#cc33ff',
-                },
-                {
-                    'label': 'Moderate Flood',
-                    'color': '#ff0000',
-                },
-                {
-                    'label': 'Minor Flood',
-                    'color': '#ff9900',
-                },
-                {
-                    'label': 'Action',
-                    'color': '#ffff00',
-                },
-                {
-                    'label': 'No Flood',
-                    'color': '#00ff00',
-                },
-                {
-                    'label': 'Flood Category Not Defined',
-                    'color': '#72afe9',
-                },
-                {
-                    'label': 'Low Water Threshold',
-                    'color': '#906320',
-                },
-                {
-                    'label': 'Data Not Current',
-                    'color': '#bdc2bb',
-                },
-                {
-                    'label': 'Out of Service',
-                    'color': '#666666',
-                },
-            ]
 
             return {
-                "mapConfig": mapConfig,
-                "viewConfig": viewConfig,
-                "layers": layers,
-                "legend": legend
+                "baseMap": "https://server.arcgisonline.com/arcgis/rest/services/Canvas/World_Light_Gray_Base/MapServer",
+                "layers": [
+                    {
+                        "configuration": {
+                            "type": "ImageLayer",
+                            "props": {
+                                "name": "asda",
+                                "source": {
+                                    "type": "ESRI Image and Map Service",
+                                    "props": {
+                                        "url": "https://maps.water.noaa.gov/server/rest/services/rfc/rfc_max_forecast/MapServer"
+                                    },
+                                },
+                            },
+                        },
+                        "attributeVariables": {
+                            "Max Status - Forecast Trend": {"nws_lid": "Location"}
+                        },
+                        "legend": {
+                            "title": "a title",
+                            "items": [
+                                {
+                                    "label": "Major Flood",
+                                    "color": "#cc33ff",
+                                },
+                                {
+                                    "label": "Moderate Flood",
+                                    "color": "#ff0000",
+                                },
+                                {
+                                    "label": "Minor Flood",
+                                    "color": "#ff9900",
+                                },
+                                {
+                                    "label": "Action",
+                                    "color": "#ffff00",
+                                },
+                                {
+                                    "label": "No Flood",
+                                    "color": "#00ff00",
+                                }
+                            ],
+                        },
+                    },
+                ],
+                "layerControl": True,
             }
 
 |
@@ -684,6 +739,11 @@ needed.::
         },
         ...
     )
+    
+If a pyproject.toml file is being used, add the entry_point arguments as shown below.::
+
+    [project.entry-points."intake.drivers"]
+    <plugin_name> = "<path_to_plugin_source>:<data_source_name>"
 
 The entry point indicates that the python package is an intake driver. When the package is installed, the plugin will 
 automatically be added to the intake registry for use. Replace the inserted values above with the necessary strings 
