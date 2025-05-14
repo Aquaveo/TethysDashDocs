@@ -6,21 +6,23 @@ Visualization Tab
 
 The visualization tab is used to select and configure the visualization that will be shown within the dashboard item.
 
-```````````````````````````````````````````
-Visualization Type and Additional Arguments
-```````````````````````````````````````````
+``````````````````
+Visualization Type
+``````````````````
+.. |search_visualizations_button| image:: ../../images/search_visualizations_button.png
+   :scale: 10%
 
 Determines the type of visualization that will be displayed. For more information about visualizations and creating 
-new options, see the :doc:`../plugins` section. Once a visualization type is selected, more options/arguments may appear 
-that are visualization specific. These additional arguments are used to select specific values needed for the 
-visualizations. 
+new options, see the :doc:`../plugins` section. 
 
-For example, if an option is selected for a chart that shows a hydrologic forecast, the visualization also needs to 
-know which location to check. In this example, a new option may appear so that the user can choose which location to 
-view.
+The visualization type can be selected from the dropdown or visualization can be search and discovered using the search 
+(|search_visualizations_button|) button. When the search button is clicked, you will them see a pop with sections and thumbnails
+for every available visualization. You can search for visualizations by tag and name. You can also hover over the cards 
+to see a description, tags, and type of visualization that it will produce.
 
-.. image:: ../../images/dashboard_edit_visualization.png
+.. image:: ../../images/search_visualizations.png
    :align: center
+   :scale: 80%
 
 |
 
@@ -31,6 +33,21 @@ view.
    
    .. image:: ../../images/dropdown_search.png
       :align: center
+
+|
+
+```````````````````````
+Visualization Arguments
+```````````````````````
+Once a visualization type is selected, more options/arguments may appear  that are visualization specific. These 
+additional arguments are used to select specific values needed for the visualizations. 
+
+For example, if an option is selected for a chart that shows a hydrologic forecast, the visualization also needs to 
+know which location to check. In this example, a new option may appear so that the user can choose which location to 
+view.
+
+.. image:: ../../images/dashboard_edit_visualization.png
+   :align: center
 
 |
 

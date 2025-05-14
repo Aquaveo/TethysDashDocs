@@ -20,7 +20,8 @@ Creating a repository
 Before developing a plugin, a new repository will need to be created for the plugin. This will ensure that others 
 users can clone and install the package as needed. The file structure is up to the developer but following the structure in 
 the `TethysDash Plugin Template respository <https://github.com/FIRO-Tethys/tethysdash_plugin_template>`_ will ensure 
-that they all work as expected. 
+that they all work as expected. Make sure to add a static folder with thumbnails of the visualizations so that the visualization 
+can be easier to discover and understand when the user browses all the available visualizations (:ref:`visualization_tab`)
 
 =======================
 Intake DataSource Class
