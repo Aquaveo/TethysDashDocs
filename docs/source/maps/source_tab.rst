@@ -11,9 +11,9 @@ properties.
 
 ------------------------------------------------------------------------------------------------------------------------
 
-+++++++++++++++
-ImageArcGISRest
-+++++++++++++++
+++++++++++++++++++++++++++
+ESRI Image and Map Service
+++++++++++++++++++++++++++
 
 **Openlayers Class:** `ImageArcGISRest <https://openlayers.org/en/latest/apidoc/module-ol_source_ImageArcGISRest-ImageArcGISRest.html>`_
 
@@ -23,13 +23,30 @@ ImageArcGISRest
     - **params - LAYERS:** (optional) Determines which layers appear on the exported map. Syntax is in the form of "[show | hide | include | exclude]:layerId1,layerId2". See `ESRI documentation <https://developers.arcgis.com/rest/services-reference/enterprise/export-map/>`_ for more information.
     - **params - TIME:** (optional) The time instant or time extent of the exported map image. Syntax is in the form of "<timeInstant>" or "<startTime>, <endTime>". See `ESRI documentation <https://developers.arcgis.com/rest/services-reference/enterprise/export-map/>`_ for more information.
     - **params - LAYERDEFS:** (optional) Allows you to filter the features of individual layers in the exported map by specifying definition expressions for those layers. Syntax is in the form of "{"<layerId1>": "<layerDef1>", "<layerId2>": "<layerDef2>"}". See `ESRI documentation <https://developers.arcgis.com/rest/services-reference/enterprise/export-map/>`_ for more information.
+    - **params - mosaicRule:** (optional) Allows you to set a mosaic rule for image services.
     - **projection:** (optional) Projection of the source data. Default is the view projection (EPSG:3857).
 
 ------------------------------------------------------------------------------------------------------------------------
 
-++++++++
-ImageWMS
-++++++++
+++++++++++++++++++++
+ESRI Feature Service
+++++++++++++++++++++
+
+**Openlayers Class:** `EsriJSON <https://openlayers.org/en/latest/apidoc/module-ol_format_EsriJSON-EsriJSON.html>`_
+
+**Layer Properties:**
+    - **url:** (required) ArcGIS Rest service URL for the feature service
+    - **layer:** (required) Layer index to use.
+    - **attributions:** (optional) Attributions.
+    - **params - TIME:** (optional) The time instant or time extent of the exported map image. Syntax is in the form of "<timeInstant>" or "<startTime>, <endTime>". See `ESRI documentation <https://developers.arcgis.com/rest/services-reference/enterprise/export-map/>`_ for more information.
+    - **params - WHERE:** (optional) A query filter for the feature service. e.g. confidence='high'
+    - **projection:** (optional) Projection of the source data. Default is the view projection (EPSG:3857).
+
+------------------------------------------------------------------------------------------------------------------------
+
++++
+WMS
++++
 
 **Openlayers Class:** `ImageWMS <https://openlayers.org/en/latest/apidoc/module-ol_source_ImageWMS-ImageWMS.html>`_
 
@@ -43,9 +60,9 @@ ImageWMS
 
 ------------------------------------------------------------------------------------------------------------------------
 
-+++++++++
-ImageTile
-+++++++++
+++++++++++
+Image Tile
+++++++++++
 
 **Openlayers Class:** `ImageTileSource <https://openlayers.org/en/latest/apidoc/module-ol_source_ImageTile-ImageTileSource.html>`_
 
@@ -83,9 +100,9 @@ value for projection information. A example of a valid GeoJSON is::
 
 ------------------------------------------------------------------------------------------------------------------------
 
-++++++++++
-VectorTile
-++++++++++
++++++++++++
+Vector Tile
++++++++++++
 
 **Openlayers Class:** `VectorTile <https://openlayers.org/en/latest/apidoc/module-ol_source_VectorTile-VectorTile.html>`_
 
