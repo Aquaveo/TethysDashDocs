@@ -32,6 +32,7 @@ is an example of a simple intake driver example::
 
     from intake.source import base
     import plotly.express as px
+    import json
 
     class PlotExample(base.DataSource):
         container = 'python'
@@ -41,16 +42,21 @@ is an example of a simple intake driver example::
         visualization_group = "Example"
         visualization_label = "Example Plot"
         visualization_type = "plotly"
+        visualization_tags = [
+            "example",
+            "plotly",
+        ]
+        visualization_description = "An example plugin for the plotly visualization"
 
-        def __init__(self, continent, github_kwargs={}, metadata=None. **kwargs):
+        def __init__(self, continent, metadata=None, **kwargs):
             self.continent = continent
-            super(PlotExample, self).__init__(metadata=metadata)
+            super().__init__(metadata=metadata)
 
         def read(self):
             """Return a version of the xarray with all the data in memory"""
             df = px.data.gapminder().query(f"continent == '{self.continent}'")
-            fig = px.line(df, x='year', y='lifeExp', color='country', symbol="country")
-            return fig
+            fig = px.line(df, x="year", y="lifeExp", color="country", symbol="country")
+            return json.loads(fig.to_json())
 
 The container, version, and name properties are all required by intake. For a more in depth review of properties and 
 classes for base.DataSource, refer to the intake 
@@ -110,7 +116,7 @@ Displays a `Plotly <https://plotly.com/python/>`_ chart with the provided data, 
         visualization_description = "An example plugin for the plotly visualization"
 
         def __init__(self, metadata=None):
-            super(PlotlyExample, self).__init__(metadata=metadata)
+            super().__init__(metadata=metadata)
 
         def read(self):
             """
@@ -191,7 +197,7 @@ Displays a table from the provided data.
         visualization_description = "An example plugin for the table visualization"
 
         def __init__(self, metadata=None):
-            super(TableExample, self).__init__(metadata=metadata)
+            super().__init__(metadata=metadata)
 
         def read(self):
             """
@@ -261,7 +267,7 @@ Displays an image based on the returned URL string.
         visualization_description = "An example plugin for the image visualization"
 
         def __init__(self, metadata=None):
-            super(ImageExample, self).__init__(metadata=metadata)
+            super().__init__(metadata=metadata)
 
         def read(self):
             """
@@ -312,7 +318,7 @@ value, label, and icon.
         visualization_description = "An example plugin for the card visualization"
 
         def __init__(self, metadata=None):
-            super(CardExample, self).__init__(metadata=metadata)
+            super().__init__(metadata=metadata)
 
         def read(self):
             """
@@ -381,7 +387,7 @@ Displays custom text
         visualization_description = "An example plugin for the text visualization"
 
         def __init__(self, metadata=None):
-            super(TextExample, self).__init__(metadata=metadata)
+            super().__init__(metadata=metadata)
 
         def read(self):
             """
@@ -428,7 +434,7 @@ Displays a variable input
         visualization_description = "An example plugin for the variable input visualization"
 
         def __init__(self, metadata=None):
-            super(VariableInputExample, self).__init__(metadata=metadata)
+            super().__init__(metadata=metadata)
 
         def read(self):
             """
@@ -491,7 +497,7 @@ configurations for configs and layers.
         visualization_description = "An example plugin for the map visualization"
 
         def __init__(self, metadata=None, **kwargs):
-            super(Plots, self).__init__(metadata=metadata)
+            super().__init__(metadata=metadata)
 
         def read(self):
 
@@ -693,7 +699,7 @@ Displays a custom visualization from a custom react component.
             visualization_type = "custom"
 
             def __init__(self, metadata=None):
-                super(CustomExample, self).__init__(metadata=metadata)
+                super().__init__(metadata=metadata)
 
             def read(self):
                 """
