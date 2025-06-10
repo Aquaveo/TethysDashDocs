@@ -575,7 +575,7 @@ Displays a custom visualization from a custom react component.
 
     **Create the Component**
 
-        The first step in implementing a custom react component is to creating it. Visit the 
+        The first step in implementing a custom react component is to create it. Visit the 
         `React <https://react.dev/>`_ website to learn more about react and react components. 
         
         Below is an example of a simple react component that renders a `Hello World!` div. This component comes from 
