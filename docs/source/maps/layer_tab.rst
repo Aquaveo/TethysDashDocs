@@ -15,4 +15,4 @@ tab are based on the `Openlayers Layer class <https://openlayers.org/en/latest/a
     - **maxResolution:** The maximum resolution (exclusive) below which this layer will be visible.
     - **minZoom:** The minimum view zoom level (exclusive) above which this layer will be visible.
     - **maxZoom:** The maximum view zoom level (inclusive) at which this layer will be visible.
-    - **minZoomQuery** (optional): The minimum view zoom level (inclusive) at which this layer can be queried. If the mp is clicked beyond the zoom level, then the map will zoom into the minZoomQuery value.
+    - **minZoomQuery** The minimum view zoom level (inclusive) at which this layer can be queried. If the mp is clicked beyond the zoom level, then the map will zoom into the minZoomQuery value.
