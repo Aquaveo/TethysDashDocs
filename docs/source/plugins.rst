@@ -552,6 +552,137 @@ configurations for configs and layers.
 
 |
 
+Map Layer
+`````````
+
+Used as templates for map layers. Users can select templates to fill out map layers options with preconfigured information 
+from the plugin
+
+.. video:: ../videos/map_layer_templates.mp4
+    :autoplay:
+    :loop:
+    :class: map-layer-video
+
+|
+
+**DataSource visualization_type value:** *map_layer*
+
+**read return: (dictionary)**
+    - **configuration** (required): An object that contains metadata for the layer and source.
+        - **type** (required): A string that determines the type of openlayers layer type ("ImageLayer", "VectorLayer", "TileLayer", "VectorTileLayer").
+        - **props** (required): An object that contains the layer properties.
+            - **name** (required): A string that determines the name of the layer.  
+            - **source** (required): An object that contains the metadata for the data source.
+                - **type** (required): A string that determines the type of openlayers source type. See maps :ref:`source_tab` for available options.
+                - **props** (required): An object containing properties for the source. See maps :ref:`source_tab` for available options and properties.
+            - **opacity** (optional): Determines the transparency of the layer. Must be a number or float between 0 and 1.
+            - **minResolution** (optional): The minimum resolution (inclusive) at which this layer will be visible.
+            - **maxResolution** (optional): The maximum resolution (exclusive) below which this layer will be visible.
+            - **minZoom** (optional): The minimum view zoom level (exclusive) above which this layer will be visible.
+            - **maxZoom** (optional): The maximum view zoom level (inclusive) at which this layer will be visible.
+            - **minZoomQuery** (optional): The minimum view zoom level (inclusive) at which this layer can be queried. If the mp is clicked beyond the zoom level, then the map will zoom into the minZoomQuery value.
+        - **layerVisibility** (optional): A boolean indicating the default visibility of the layer. 
+        - **style** (required): An object that contains the metadata for styling. See maps :ref:`style_tab` for more information.
+    - **attributeVariables** (optional): An object that maps a layers name (key) with a nested object for the layers field and desired variable input. See maps :ref:`attributes_and_popups_tab` for more information.
+    - **omittedPopupAttributes** (optional): An object that maps a layers name (key) with an array of fields to omit in the popup. See maps :ref:`attributes_and_popups_tab` for more information.
+    - **attributeAliases** (optional): An object that maps a layers name (key) with a nested object for the layers field and desired aliases. See maps :ref:`attributes_and_popups_tab` for more information.
+    - **queryable** (optional): A boolean indicating if the layer is queryable
+    - **legend** (optional): See maps :ref:`legend_tab` for more information.
+
+**Example**: ::
+
+    from intake.source import base
+
+
+    class MapLayerExample(base.DataSource):
+        container = "python"
+        version = "0.0.1"
+        name = "map_example"
+        visualization_args = {}
+        visualization_group = "Example"
+        visualization_label = "Map Layer Template Example"
+        visualization_type = "map_layer"
+        visualization_tags = ["example", "map", "map_layer"]
+        visualization_description = "An example plugin for the map layer template"
+
+        def __init__(self, metadata=None, **kwargs):
+            super().__init__(metadata=metadata)
+
+        def read(self):
+            """
+            Return map layer configuration
+            """
+            layer_source = {
+                "type": "ESRI Image and Map Service",
+                "props": {
+                    "url": "https://maps.water.noaa.gov/server/rest/services/rfc/rfc_max_forecast/MapServer",
+                    "attributions": "National Water Center",
+                    "params": {"LAYERS": "show:0"},
+                },
+            }
+
+            layer_configuration = {
+                "type": "ImageLayer",
+                "props": {
+                    "name": "RFC Max Forecast",
+                    "source": layer_source,
+                    "opacity": 0.5,
+                },
+                "layerVisibility": True,
+                "style": {
+                    "type": "Style",
+                    "props": {
+                        "stroke": {
+                            "type": "Stroke",
+                            "props": {
+                                "color": "#501020",
+                                "width": 1,
+                            },
+                        },
+                    },
+                },
+            }
+
+            aliases = {
+                "Max Status - Forecast Trend": {
+                    "record_threshold": "Record Threshold",
+                    "major_threshold": "Major Threshold",
+                    "moderate_threshold": "Moderate Threshold",
+                    "minor_threshold": "Minor Threshold",
+                    "action_threshold": "Action Threshold",
+                }
+            }
+
+            variables = {
+                "Max Status - Forecast Trend": {
+                    "nws_lid": "LID",
+                }
+            }
+
+            omitted_attributes = {
+                "Max Status - Forecast Trend": [
+                    "geom",
+                    "oid",
+                ]
+            }
+
+            legend = {
+                "title": "Some Title",
+                "items": [{"label": "Some label", "color": "green", "symbol": "square"}],
+            }
+
+            return {
+                "configuration": layer_configuration,
+                "attributeVariables": variables,
+                "omittedPopupAttributes": omitted_attributes,
+                "attributeAliases": aliases,
+                "queryable": True,
+                "legend": legend,
+            }
+
+
+|
+
 .. _custom_visualization:
 
 Custom Visualization
