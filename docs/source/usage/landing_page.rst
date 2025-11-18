@@ -56,6 +56,7 @@ Dashboard Card Context Menu
 
 **Share → Make Private** (*Admin Privileges Required*): Remove public access to the dashboard.
 
+.. _share-update-permissions:
 **Share → Update Permissions**   
 (*Admin Privileges Required*): Manage what groups and people have different levels of access for the dashboard. When selected, a pop-up will appear allowing you to enter user names or group names to add them to the dashboard. You may assign each person as a viewer, editor, or admin.  
    - *Viewer*: Can see the dashboard on their landing page but cannot edit it.  

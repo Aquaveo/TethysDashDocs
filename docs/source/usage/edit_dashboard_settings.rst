@@ -27,14 +27,6 @@ Description
 Indicates the dashboard description. This is the text that will appear when hovering over the dashboard card in the 
 landing page of the application. 
 
-==============
-Sharing Status
-==============
-
-Indicates if the dashboard will be private (only accessible to the user) or public (accessible to anyone). Public 
-dashboards are accessible to anyone but can only be edited by the user who created it.
-
-No public dashboards can have the same name.
 
 ================================
 Unrestricted Grid Item Placement
@@ -48,6 +40,13 @@ Notes
 
 Users can write, save, and edit notes for the dashboard. For public dashboards, these notes can be seen by anyone 
 that accesses the dashboard.
+
+=========================
+Sharing, Copying or Deleting Dashboard
+=========================
+
+At the bottom of the dashboard settings panel are options to share, copy, or delete the dashboard.
+
 
 =========================
 Saving Dashboard Settings
