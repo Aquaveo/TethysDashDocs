@@ -42,25 +42,37 @@ Dashboard Card Context Menu
    .. image:: ../../images/dashboard_context_menu.png
       :align: center
 
-   **Open**: Open and view the contents of the dashboard. Users can also double click on the card to open the dashboard.
+**Open**: Open and view the contents of the dashboard. Users can also double-click on the card to open the dashboard.
 
-   **Rename** (*Ownership Required*): Rename the dashboard.
+**Rename** (*Admin Privileges Required*): Rename the dashboard.
 
-   **Update Description** (*Ownership Required*): Update the dashboard description.
+**Update Description** (*Editor Privileges Required*): Update the dashboard description.
 
-   **Update Thumbnail** (*Ownership Required*): Update the dashboard thumbnail.
+**Update Thumbnail** (*Editor Privileges Required*): Update the dashboard thumbnail.
 
-   **Share --> Make Public** (*Ownership Required*): Share the dashboard so that it can be viewed by anyone. Other viewers will have read-only access.
+**Share → Make Public** (*Admin Privileges Required*): Share the dashboard so that it can be viewed by anyone. Other viewers will have read-only access.
 
-   **Share --> Copy Public URL**: Copy the public url to the clipboard.
+**Share → Copy Public URL**: Copy the public URL to the clipboard.
 
-   **Share --> Make Private** (*Ownership Required*): Remove public access to the dashboard.
+**Share → Make Private** (*Admin Privileges Required*): Remove public access to the dashboard.
 
-   **Copy** (*Sign In Required*): Create a copy of the dashboard for the user.
+**Share → Update Permissions**   
+(*Admin Privileges Required*): Manage what groups and people have different levels of access for the dashboard. When selected, a pop-up will appear allowing you to enter user names or group names to add them to the dashboard. You may assign each person as a viewer, editor, or admin.  
+   - *Viewer*: Can see the dashboard on their landing page but cannot edit it.  
+   - *Editor*: Can view the dashboard and edit its contents, description, and thumbnail.  
+   - *Admin*: Can do everything an editor can, plus manage sharing permissions and rename the dashboard.  
+Giving access to a group grants that level of access to all members in the group. The dashboard can also be made public.
+   
+   .. image:: ../../images/manage_permissions.png
+      :align: center
+      :width: 400px
 
-   **Export**: Export the dashboard into a JSON file.
 
-   **Delete**: (*Ownership Required*): Delete the dashboard.
+**Copy** (*Sign In Required*): Create a copy of the dashboard for the user.
+
+**Export**: Export the dashboard into a JSON file.
+
+**Delete** (*Admin Privileges Required*): Delete the dashboard.
 
 Importing Dashboards
 --------------------
@@ -70,7 +82,7 @@ Importing Dashboards
 
 In order to provide an easier way to share and update dashboards between tethysdash instances, dashboards can be imported 
 using a structured JSON format. To import a dashboard, click on the dashboard import icon (|dashboard_import_icon|) in the 
-header of the landing page. You will then be prompted to chose a json file and import the file. 
+header of the landing page. You will then be prompted to choose a json file and import the file. 
 
 The structure of the JSON should be the following:
 
@@ -126,4 +138,27 @@ The following options are available for the metadata_string key:
    * **refreshRate** (integer): Determines the time interval for which the visualization will be refreshed to get newest information
   
    * Any additional settings for specific visualizations (see :ref:`settings_tab`)
+
+Manage Visualization Permissions
+----------------------------
+
+When creating plugins (detailed more here), one option in the plugin is the parameter ``visualization_permissions``. It defaults to ``false``; however, if set to ``true`` then permissions can be updated for that specific visualization. If none of the plugins include this option, then visualization permissions cannot be adjusted on the landing page.
+
+A group name or username can be added to a specific visualization. Only users with permission will be able to access those visualizations.
+
+
+Manage Groups
+-------------
+
+Manage Groups allows you to create groups of users so that access can be granted to an entire group without selecting individual users each time. To manage groups, select the icon in the upper right-hand corner (). This opens a pop-up window that allows you to edit or delete existing groups and to create new ones.
+
+   .. image:: ../../images/permission_groups.png
+      :align: center
+      :width: 400px
+
+To create a new group, click **Create New Group**. Then enter a name and a description for the group. Add users using their username. Users may be either *members* or *admins* of the group. Group admins can make edits to the group.
+
+   .. image:: ../../images/add_permission_group.png
+      :align: center
+      :width: 400px
 
