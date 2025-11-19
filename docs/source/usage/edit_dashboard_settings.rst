@@ -27,7 +27,6 @@ Description
 Indicates the dashboard description. This is the text that will appear when hovering over the dashboard card in the 
 landing page of the application. 
 
-
 ================================
 Unrestricted Grid Item Placement
 ================================
@@ -41,11 +40,10 @@ Notes
 Users can write, save, and edit notes for the dashboard. For public dashboards, these notes can be seen by anyone 
 that accesses the dashboard.
 
-=========================
+=======================================
 Sharing, Copying or Deleting Dashboard
-=========================
-
-At the bottom of the dashboard settings panel are options to share, copy, or delete the dashboard.
+=======================================
+At the bottom of the dashboard settings panel are options to copy, manage dashboard permissions or delete the dashboard. More details follow are on the following pages.
 
 
 =========================

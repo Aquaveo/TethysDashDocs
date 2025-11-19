@@ -41,13 +41,22 @@ Layers in this table can also be moved to switch order of rendering.
 Map Extent
 ----------------
 
-This allows you to choose either "Use the Previewed Map Extent" or "Use a Custom Extent". If you choose to use the previewed map extent, your map will automatically zoom to the extent that you currently have displayed in the map. If you choose to use a custom extent, you will be given the option to enter the minimum and maximum latitude and longitude values for the map extent. Then you can aslo add an extent variable name.
+This option allows selecting either **"Use the Previewed Map Extent"** or **"Use a Custom Extent."**
+
+When **Use the Previewed Map Extent** is selected, the map automatically zooms to the extent currently displayed.
+
+When **Use a Custom Extent** is selected, fields appear for entering the minimum and maximum latitude and longitude values that define the extent. An extent variable name can also be added.
+
 
 ----------------
 Map Drawing
 ----------------
 
-Map drawing allows used to draw on the map. You can choose to place a limit on the number items users can draw under "Drawn Feature Limit". You can select what types of shapes users are able to draw on the map by chooseing the checkbox for allowed types. The options are Point, LineString, Polygon and Rectangle. The map drawings can be saved as a variable name which allows the drawings to be used in other visualizations.
+Map drawing allows adding features directly to the map:
+
+- **Drawn Feature Limit**: Set a maximum number of items that can be drawn.
+- **Allowed Types**: Choose which shapes can be drawn: **Point**, **LineString**, **Polygon**, **Rectangle**.
+- **Variable Name**: Save the drawings under a variable name so they can be used in other visualizations.
 
 
 

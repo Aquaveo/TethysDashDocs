@@ -72,6 +72,7 @@ Properties:
     - **visualization_type**: This a property specific for the dashboard app. Describes the type of visualization this is created. Can be "plotly", "table","image", "card", "map", or "custom". See the `Plugin Visualization Types <Plugin Visualization Types_>`_ section and the "Visualization Type Argument" for more information. 
     - **visualization_description**: This a property specific for the dashboard app. Provides a description of the visualization. 
     - **visualization_tags**: This a property specific for the dashboard app. An array of tags used for visualization search and discovery.
+    - **visualization_permissions**: This a property specific for the dashboard app. A boolean value that determines if the visualization will have permission settings that can be adjusted on the landing page. Defaults to false.
 Methods:
     - **init**: This is a typical python class **init** method. Set any class specific properties here for the visualization, such as the "continent" property in the example above.
     - **read**: This is the main function that developers will want to focus on. The dashboard app will call this method and use the results as the visualization data.
@@ -701,7 +702,7 @@ Displays a custom visualization from a custom react component.
     `Module Federation <https://webpack.js.org/concepts/module-federation/>`_ setup from webpack. An example of a 
     functioning custom component for tethysdash can be found in the 
     `tethysdash_custom_visualization_example <https://github.com/FIRO-Tethys/tethysdash_custom_visualization_example>`_ 
-    repository. The follow files/configurations are needed to implement a custom component and come from the mentioned 
+    repository. The following files/configurations are needed to implement a custom component and come from the mentioned 
     repository.
 
     **Create the Component**
@@ -878,7 +879,7 @@ needed.::
         ...
     )
     
-If a pyproject.toml file is being used, add the entry_point arguments as shown below.::
+If a pyproject.toml file is being used, add the entry_point arguments as shown below::
 
     [project.entry-points."intake.drivers"]
     <plugin_name> = "<path_to_plugin_source>:<data_source_name>"

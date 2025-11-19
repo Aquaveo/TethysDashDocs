@@ -35,11 +35,11 @@ ESRI Feature Service
 **Openlayers Class:** `EsriJSON <https://openlayers.org/en/latest/apidoc/module-ol_format_EsriJSON-EsriJSON.html>`_
 
 **Layer Properties:**
-    - **url:** (required) ArcGIS Rest service URL for the feature service
+    - **url:** (required) ArcGIS Rest service URL for the feature service.
     - **layer:** (required) Layer index to use.
     - **attributions:** (optional) Attributions.
     - **params - TIME:** (optional) The time instant or time extent of the exported map image. Syntax is in the form of "<timeInstant>" or "<startTime>, <endTime>". See `ESRI documentation <https://developers.arcgis.com/rest/services-reference/enterprise/export-map/>`_ for more information.
-    - **params - WHERE:** (optional) A query filter for the feature service. e.g. confidence='high'
+    - **params - WHERE:** (optional) A query filter for the feature service. e.g. confidence='high'.
     - **projection:** (optional) Projection of the source data. Default is the view projection (EPSG:3857).
 
 ------------------------------------------------------------------------------------------------------------------------
@@ -56,7 +56,7 @@ WMS
     - **attributions:** (optional) Attributions.
     - **params - STYLES:** (optional) The name of a preloaded SLD (Styled Layer Descriptor). For additional custom styling, see the style tab.
     - **params - TIME:** (optional) Time value of layer desired.  Syntax is in the form of "yyyy-MM-ddThh:mm:ss.SSSZ".
-    - **projection:** (optional) Projection. Default is the view projection (EPSG:3857)
+    - **projection:** (optional) Projection. Default is the view projection (EPSG:3857).
 
 ------------------------------------------------------------------------------------------------------------------------
 
@@ -69,7 +69,7 @@ Image Tile
 **Layer Properties:**
     - **url:** (required) Image Tile URL.
     - **attributions:** (optional) Attributions.
-    - **projection:** (optional) Projection. Default is the view projection (EPSG:3857)
+    - **projection:** (optional) Projection. Default is the view projection (EPSG:3857).
 
 ------------------------------------------------------------------------------------------------------------------------
 
@@ -109,7 +109,7 @@ Vector Tile
 **Layer Properties:**
     - **urls:** (required) A comma delimited list of URL templates. Must include {x}, {y} or {-y}, and {z} placeholders. A {?-?} template pattern, for example subdomain{a-f}.domain.com, may be used instead of defining each one separately in the urls option.
     - **attributions:** (optional) Attributions.
-    - **projection:** (optional) Projection. Default is the view projection (EPSG:3857)
+    - **projection:** (optional) Projection. Default is the view projection (EPSG:3857).
 
 
 

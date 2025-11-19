@@ -37,6 +37,11 @@ Check this option to provide a box shadow around the dashboard item. This will c
 selected for the border.
 
 ```````````````````````````````````````````
+Show Attribution (All Visualizations)
+```````````````````````````````````````````
+Check this box if there is an attribution associated with the visualization and you would like it to be shown on the dashboard item. It will show up as a small icon in the upper left hand corner. Hover over the icon to see the attribution text.
+
+```````````````````````````````````````````
 Custom Messaging (All Visualizations)
 ```````````````````````````````````````````
 

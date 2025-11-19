@@ -69,9 +69,11 @@ This visualization will allow users to add a map to their dashboards. For more i
 
 Additional Arguments:
    - **Base Map:** A list of available basemaps to use for the map
-   - **Additional Layers:** Click on the "Add Layer" button to add to new layer to the map. Users can also edit or delete existing layers from the provide summary table
-   - **Show Layer Controls:** Determines if a layer control menu will be added to the map for users to toggle layers
-    
+   - **Layer Controls:** Determines if a layer control menu will be added to the map for users to toggle layers
+   - **Layers:** Click on the "Add Layer" button to add to new layer to the map. Users can also edit or delete existing layers from the provide summary table
+   - **Map Extent:** Choose to either use the previewed map extent or a custom extent
+   - **Map Drawing:** Allows users to draw on the map. Users can choose the types of shapes to draw and set a limit on the number of drawn features. Drawings can be saved as a variable name for use in other visualizations.
+
 ------------------------------------------------------------------------------------------------------------------------
 
 ::::::::::::

@@ -8,7 +8,7 @@ The Attributes/Popup tab is used to configure the interaction with the layer in 
 **After the layer name and required source properties are configured**, then a table of layers and their attributes 
 will be shown.
 
-A checkbox at the top of the tab says "Allow Layer Query", which enables click interaction for the layer. If the checkbox is unchecked, no table of attrbute will load because the layer will now be queriable.
+A checkbox at the top of the tab says "Allow Layer Query", which enables click interaction for the layer. If the checkbox is unchecked, no table of attrbute will load because the layer will not be queriable.
 
 Within this table, fields can be configured to handle click interaction in 2 ways:
 

@@ -30,7 +30,7 @@ Creating a Dashboard
 .. |login_icon| image:: ../../images/login_icon.png
    :scale: 8%
 
-In order to create a new dashboard, ensure that you are signed into the tethys portal. If a login inco (|login_icon|) is shown 
+In order to create a new dashboard, ensure that you are signed into the tethys portal. If a login icon (|login_icon|) is shown 
 in the header of the app, click on it and sign in. 
 
 If you are signed into the portal, then there will be a blank dashboard card with the text "Create a New Dashboard". Click on 
@@ -38,6 +38,7 @@ the "Create a New Dashboard" card, provide the name and description, and then cl
 
 Dashboard Card Context Menu
 ---------------------------
+After cliking on the 3dots on the top right of a dashboard card, a context menu will appear with the following options:
 
    .. image:: ../../images/dashboard_context_menu.png
       :align: center
@@ -143,15 +144,15 @@ The following options are available for the metadata_string key:
 Manage Visualization Permissions
 ----------------------------
 
-When creating plugins (detailed more here), one option in the plugin is the parameter ``visualization_permissions``. It defaults to ``false``; however, if set to ``true`` then permissions can be updated for that specific visualization. If none of the plugins include this option, then visualization permissions cannot be adjusted on the landing page.
+When creating plugins (detailed more :ref:`here <visualizationplugins>`), one option in the plugin is the parameter ``visualization_permissions``. It defaults to ``false``; however, if set to ``true`` then permissions can be updated for that specific visualization. A group name or username can be added to a specific visualization. Only users with permission will be able to access those visualizations.
 
-A group name or username can be added to a specific visualization. Only users with permission will be able to access those visualizations.
+If none of the plugins include this option, then visualization permissions cannot be adjusted on the landing page.
 
 
 Manage Groups
 -------------
 
-Manage Groups allows you to create groups of users so that access can be granted to an entire group without selecting individual users each time. To manage groups, select the icon in the upper right-hand corner (). This opens a pop-up window that allows you to edit or delete existing groups and to create new ones.
+Manage Groups allows you to create groups of users so that access can be granted to an entire group without selecting individual users each time. To manage groups, select the icon for groups in the upper right-hand corner. This opens a pop-up window that allows you to edit or delete existing groups and to create new ones.
 
    .. image:: ../../images/permission_groups.png
       :align: center
