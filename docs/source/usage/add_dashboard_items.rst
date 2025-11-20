@@ -14,7 +14,7 @@ application header.
 
 |
 
-Once clicked a new dashboard item will appear at the bottom of the dashboard.
+Once clicked a new dashboard item will appear at the top left corner of the dashboard.
 
 .. image:: ../../images/add_dashboard_item_new.png
    :align: center

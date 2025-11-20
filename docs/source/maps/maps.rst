@@ -3,7 +3,7 @@
 Maps
 ====
 
-This section will provide information on configuring and working with maps within tethys dash.
+This section will provide information on configuring and working with maps within TethysDash.
    
 
 .. toctree::

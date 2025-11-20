@@ -11,5 +11,5 @@ share an existing dashboard, perform the following steps:
 
    1. Select the desired dashboard to share. 
    2. Click on the settings (|dashboard_settings_button|) button in the app header.
-   3. Under the "Sharing Status" option, Click on the "Public" option.
-   4. Click on the "Save change" button at the bottom of the settings panel to save the new sharing status of the dashboard.
+   3. At the bottom of the menu are some icons. Select the yellow "Manage Dashboards Permissions" button.
+   4. In the pop-up you will have the option to change the status to public. Alternatively, you can add groups or users and update their permissions like is explained in :ref:`the Share → Update Permissions section <share-update-permissions>`.

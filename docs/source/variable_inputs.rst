@@ -32,6 +32,10 @@ To setup a variable input, perform the following:
         - **text:** This will create a text based HTML input with a visualization refresh button. 
         - **number:** This will create a number based HTML input with a visualization refresh button.
         - **checkbox:** This will create a checkbox HTML input.
+        - **date:** This will create a date picker HTML input with a visualization refresh button. Enter a default value by selecting on the calendar.
+        - **date-hour:** Same as above, but there will also be an option to select he time.
+        - **slider:** This will create a slider HTML input. You will have the option to choose between "Single Value" or "Range". Then you can choose the data type to either be a "number" or "date". You will then select the minimum and maximum values for the slider along with the step side. For "Single Value" you will choose an initial value. For "Range" you will choose an range start and range end value. In both cases you will get to choose the output format.
+        - **csv uploader:** This will create a file uploader HTML input that only accepts CSV files. You can choose the CSV columns by entering a value in "CSV Columns" and hitting enter.
         - **EXISTING VISUALIZATION INPUTS:** The options under this item are derived from arguments for installed visualization plugins. Selecting one of these options will imitate the visualization argument but make it a variable input.
 
 .. image:: ../images/variable_input_setup.png
